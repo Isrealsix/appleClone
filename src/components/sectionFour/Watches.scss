@@ -1,0 +1,106 @@
+@import '../sass/abstracts/mixins';
+
+.watch {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	opacity: 1;
+
+	& > div {
+		position: absolute;
+	}
+
+	&__band--img {
+		height: 35rem;
+		width: 35rem;
+		object-fit: contain;
+	}
+
+	&__cases {
+		flex-direction: column;
+		transition: margin-top 1s;
+	}
+
+	&__bands {
+		transition: margin-left 1s;
+	}
+
+	&__case--img {
+		height: 35rem;
+		width: 35rem;
+		object-fit: contain;
+	}
+
+	// Watch control
+	&-control {
+		position: absolute;
+		width: 4rem;
+		height: 4rem;
+		background-color: rgba(221, 221, 221, 0.4);
+		border-radius: 5rem;
+
+		& .icon {
+			font-size: 3rem;
+			color: var(--color-primary);
+		}
+
+		&--top {
+			top: 22vh;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&--right {
+			top: 50%;
+			right: 2rem;
+			transform: translateY(-50%);
+		}
+
+		&--down {
+			bottom: 22vh;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&--left {
+			top: 50%;
+			left: 2rem;
+			transform: translateY(-50%);
+		}
+
+		&.hide {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	// Watch button
+
+	&-btn {
+		position: absolute;
+		bottom: 30vh;
+		right: 35%;
+		width: 13rem;
+		height: 5rem;
+		background-color: var(--color-black);
+		color: var(--color-primary);
+		border: 0.1rem dashed var(--color-white);
+		border-radius: 4rem;
+		font-size: 1.6rem;
+		font-weight: 200;
+		cursor: pointer;
+
+		@include respond(tab-land) {
+			right: 25%;
+		}
+
+		@include respond(phone-land) {
+			right: 15%;
+		}
+
+		@include respond(tiny-screen) {
+			right: 5%;
+		}
+	}
+}
