@@ -4,38 +4,38 @@ import './_navbar.scss';
 
 const Navbar = () => {
 	return (
-		<Fragment>
+		<div>
 			{/* logo */}
-			<a href="#" class="logo">
+			<a href="#" className="logo">
 				<AppleIcon className="logo" />
 			</a>
 
 			{/* Navbar */}
-			<nav class="navbar">
+			<nav className="navbar">
 				<ul>
-					<li class="navbar__list">
-						<a href="#iphones" class="navbar__link">
+					<li className="navbar__list">
+						<a href="#iphones" className="navbar__link">
 							iPhonea 12
 						</a>
 					</li>
-					<li class="navbar__list">
-						<a href="#macbooks" class="navbar__link">
+					<li className="navbar__list">
+						<a href="#macbooks" className="navbar__link">
 							Macbook Air
 						</a>
 					</li>
-					<li class="navbar__list">
-						<a href="#watches" class="navbar__link">
+					<li className="navbar__list">
+						<a href="#watches" className="navbar__link">
 							Watch
 						</a>
 					</li>
-					<li class="navbar__list">
-						<a href="#airpods" class="navbar__link">
+					<li className="navbar__list">
+						<a href="#airpods" className="navbar__link">
 							AirPods
 						</a>
 					</li>
 				</ul>
 			</nav>
-		</Fragment>
+		</div>
 	);
 };
 

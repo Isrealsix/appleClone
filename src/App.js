@@ -1,11 +1,12 @@
+import { Fragment } from 'react';
 import './App.scss';
-import Navbar from './components/navbar/Navbar';
+import SectionOne from './components/sectionOne/SectionOne';
 
 function App() {
 	return (
-		<div className="center">
-			<Navbar />
-		</div>
+		<Fragment>
+			<SectionOne />
+		</Fragment>
 	);
 }
 
