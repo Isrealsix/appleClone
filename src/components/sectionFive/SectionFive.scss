@@ -1,0 +1,89 @@
+@import '../sass/abstracts/mixins';
+
+.section-5 {
+	width: 100%;
+	height: 100vh;
+
+	&__airpods {
+		width: 90%;
+		height: 80%;
+		display: flex;
+		position: relative;
+
+		&-heading {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			font-size: 15rem;
+			font-weight: 300;
+			color: var(--color-white);
+			text-shadow: 0.1rem 0.1rem 0 #999;
+
+			@include respond(tab-port) {
+				font-size: 12rem;
+			}
+		}
+
+		&-buttons {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			margin-top: 5rem;
+
+			@include respond(phone-port) {
+				width: 50rem;
+				text-align: center;
+			}
+
+			& .airpods-btn {
+				width: 15rem;
+				height: 4rem;
+				background-color: var(--color-primary);
+				margin: 0 2rem;
+				border: none;
+				color: var(--color-white);
+				border-radius: 0.5rem;
+				cursor: pointer;
+				transition: transform 0.2s;
+
+				&:last-child {
+					background-color: var(--color-white);
+					color: var(--color-primary);
+				}
+
+				&:active {
+					transform: translateY(0.3rem);
+				}
+
+				@include respond(phone-land) {
+					background-color: var(--color-white);
+					color: var(--color-primary);
+					box-shadow: 0.1rem 0.1rem 0.1rem #ddd;
+				}
+			}
+		}
+
+		& img {
+			width: 50%;
+			height: 100%;
+			object-fit: contain;
+
+			&.airpods-img:nth-child(3) {
+				background-color: var(--color-primary);
+				border-radius: 0.4rem;
+			}
+
+			@include respond(phone-land) {
+				&.airpods-img:nth-child(2) {
+					display: none;
+				}
+
+				&.airpods-img:nth-child(3) {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
