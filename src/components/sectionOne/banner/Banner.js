@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import './Banner.scss';
 
 const Banner = () => {
 	return (
