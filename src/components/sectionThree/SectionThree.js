@@ -4,10 +4,10 @@ import './SectionThree.scss';
 
 const SectionThree = () => {
 	return (
-		<section class="section-3 center" id="macbooks">
-			<h1 class="section-3__heading">MacBook Air</h1>
+		<section className="section-3 center" id="macbooks">
+			<h1 className="section-3__heading">MacBook Air</h1>
 
-			<div class="section-3__content center">
+			<div className="section-3__content center">
 				<Macbook />
 			</div>
 		</section>

@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import './Banner.scss';
+import Slideshow from './Slideshow';
 
 const Banner = () => {
 	return (
@@ -11,8 +12,7 @@ const Banner = () => {
 				<button type="button">Buy Now</button>
 			</div>
 
-			{/* slideshow */}
-			<div className="slideshow"></div>
+			<Slideshow />
 		</Fragment>
 	);
 };
